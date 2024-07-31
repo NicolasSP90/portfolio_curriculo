@@ -1,3 +1,7 @@
+:root{
+    --cabecao-height: 50px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,15 +10,25 @@
 body{
     box-sizing: border-box;
     background-color: var(--background-color);
-    color: var(--main-font-color)
+    color: var(--main-font-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cabecalho{
+    height: var(--cabecao-height);
+    display: flex;
+    align-items: center;
+    justify-content: left;
     padding: 2% 0% 0% 15%;
 }
 
 .cabecalho__menu{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 80px;
 }
 
@@ -108,6 +122,15 @@ body{
     border-radius: 5%;
 }
 
+.apresentacao__links__projetos{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    color: var(--contrast-color);
+    text-decoration: none;
+    font-family: var(--main-font);
+}
+
 .rodape{
     color: var(--background-color);
     background-color: var(--contrast-color);
@@ -121,12 +144,12 @@ body{
 
 @media (max-width:1200px){
     body{
-        min-width: 600px;
+        min-width: 700px;
         overflow: auto;
     }
 
     .cabecalho{
-        padding: 10% 0% 0% 0%;
+        padding: 2% 0% 0% 5%;
     }
 
     .cabecalho__menu{
